@@ -18,21 +18,17 @@ public class FormTest {
 
 
     @BeforeAll
-    static void setUpAll() {
-        //System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-        WebDriverManager.chromedriver().setup();
+    public static void setUpAll() {
+        System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+        //WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
     void setUp() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized");
-        options.addArguments("disable-infobars");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--no-sandbox");
         driver = new ChromeDriver(options);
     }
 
@@ -43,4 +39,8 @@ public class FormTest {
         }
     }
 
+    @Test
+    void validTest() {
+        driver.get("http://0.0.0.0:9999");
+    }
 }
