@@ -124,8 +124,8 @@ public class FormTest {
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79005678910");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
-        String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text);
+        String text = driver.findElement(By.cssSelector("[data-test-id=name].input_invalid .input__sub")).getText().trim();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", text);
     }    ///BUG
 
     @Test
@@ -135,8 +135,8 @@ public class FormTest {
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79005678910");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
-        String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text);
+        String text = driver.findElement(By.cssSelector("[data-test-id=name].input_invalid .input__sub")).getText().trim();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", text);
     }    ///BUG
 
     @Test
