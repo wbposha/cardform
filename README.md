@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/pcvlbvkk0txxb3cf?svg=true)](https://ci.appveyor.com/project/ywb/cardform)
+[![Java CI with Gradle](https://github.com/wbposha/cardform/actions/workflows/gradle.yml/badge.svg?branch=main)](https://github.com/wbposha/cardform/actions/workflows/gradle.yml)
